@@ -1,0 +1,1901 @@
+{
+  "info": {
+    "_postman_id": "5a6a2664-0dcc-4685-9faa-22094c9d0baa",
+    "name": "Blood Sugar Presure",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "14024807"
+  },
+  "item": [
+    {
+      "name": "User",
+      "item": [
+        {
+          "name": "Register",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "name",
+                  "value": "tester_al2",
+                  "type": "text",
+                  "uuid": "4b26aeb2-a7dc-47b3-a448-a9be068a4dbe"
+                },
+                {
+                  "key": "email",
+                  "value": "al2i@tester.com",
+                  "type": "text",
+                  "uuid": "8668f665-efc4-4712-b9a3-8cd6f2bac96e"
+                },
+                {
+                  "key": "password",
+                  "value": "123456789",
+                  "type": "text",
+                  "uuid": "71dba76d-3e61-4db3-878f-7c483d3f39fd"
+                },
+                {
+                  "key": "password_confirmation",
+                  "value": "123456789",
+                  "type": "text",
+                  "uuid": "1bea11c0-8844-4d0b-9ada-64ddf459e121"
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{base_url}}/register",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "register"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Register",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "formdata",
+                  "formdata": [
+                    {
+                      "key": "name",
+                      "value": "tester_al2",
+                      "type": "text",
+                      "uuid": "4b26aeb2-a7dc-47b3-a448-a9be068a4dbe"
+                    },
+                    {
+                      "key": "email",
+                      "value": "al2i@tester.com",
+                      "type": "text",
+                      "uuid": "8668f665-efc4-4712-b9a3-8cd6f2bac96e"
+                    },
+                    {
+                      "key": "password",
+                      "value": "123456789",
+                      "type": "text",
+                      "uuid": "71dba76d-3e61-4db3-878f-7c483d3f39fd"
+                    },
+                    {
+                      "key": "password_confirmation",
+                      "value": "123456789",
+                      "type": "text",
+                      "uuid": "1bea11c0-8844-4d0b-9ada-64ddf459e121"
+                    }
+                  ]
+                },
+                "url": {
+                  "raw": "{{base_url}}/register",
+                  "host": [
+                    "{{base_url}}"
+                  ],
+                  "path": [
+                    "register"
+                  ]
+                }
+              },
+              "status": "Created",
+              "code": 201,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "Host",
+                  "value": "127.0.0.1:8000"
+                },
+                {
+                  "key": "Connection",
+                  "value": "close"
+                },
+                {
+                  "key": "X-Powered-By",
+                  "value": "PHP/8.3.9"
+                },
+                {
+                  "key": "Cache-Control",
+                  "value": "no-cache, private"
+                },
+                {
+                  "key": "Date",
+                  "value": "Fri, 13 Mar 2026 09:24:13 GMT"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "X-RateLimit-Limit",
+                  "value": "6"
+                },
+                {
+                  "key": "X-RateLimit-Remaining",
+                  "value": "5"
+                },
+                {
+                  "key": "Access-Control-Allow-Origin",
+                  "value": "*"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"user\": {\n        \"name\": \"tester_al2\",\n        \"email\": \"al2i@tester.com\",\n        \"role\": \"user\",\n        \"updated_at\": \"2026-03-13T09:24:12.000000Z\",\n        \"created_at\": \"2026-03-13T09:24:12.000000Z\",\n        \"id\": 4\n    },\n    \"token\": \"2|N4GotA8A2XMWCy4M8gy9RcTP9w1fuZ8NAdbn4DbJ18135982\"\n}"
+            }
+          ]
+        },
+        {
+          "name": "Login",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "email",
+                  "value": "ali@tester.com",
+                  "type": "text",
+                  "uuid": "eefe3c83-0ffc-4a4c-992a-f16a277b5400"
+                },
+                {
+                  "key": "password",
+                  "value": "123456789",
+                  "type": "text",
+                  "uuid": "e622a8a2-5b16-4764-b564-4e26507dc257"
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{base_url}}/login",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "login"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Login",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "formdata",
+                  "formdata": [
+                    {
+                      "key": "email",
+                      "value": "ali@tester.com",
+                      "type": "text",
+                      "uuid": "eefe3c83-0ffc-4a4c-992a-f16a277b5400"
+                    },
+                    {
+                      "key": "password",
+                      "value": "123456789",
+                      "type": "text",
+                      "uuid": "e622a8a2-5b16-4764-b564-4e26507dc257"
+                    }
+                  ]
+                },
+                "url": {
+                  "raw": "{{base_url}}/login",
+                  "host": [
+                    "{{base_url}}"
+                  ],
+                  "path": [
+                    "login"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "Host",
+                  "value": "127.0.0.1:8000"
+                },
+                {
+                  "key": "Connection",
+                  "value": "close"
+                },
+                {
+                  "key": "X-Powered-By",
+                  "value": "PHP/8.3.9"
+                },
+                {
+                  "key": "Cache-Control",
+                  "value": "no-cache, private"
+                },
+                {
+                  "key": "Date",
+                  "value": "Fri, 13 Mar 2026 09:23:40 GMT"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "X-RateLimit-Limit",
+                  "value": "6"
+                },
+                {
+                  "key": "X-RateLimit-Remaining",
+                  "value": "4"
+                },
+                {
+                  "key": "Access-Control-Allow-Origin",
+                  "value": "*"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"user\": {\n        \"id\": 3,\n        \"name\": \"tester_al\",\n        \"email\": \"ali@tester.com\",\n        \"role\": \"user\",\n        \"email_verified_at\": null,\n        \"created_at\": \"2026-03-13T09:19:58.000000Z\",\n        \"updated_at\": \"2026-03-13T09:19:58.000000Z\"\n    },\n    \"token\": \"1|lDdsK4hTwFIYfSAZ1Xr44F4aVMNgoMSCMLTX3rG5760a4c59\"\n}"
+            }
+          ]
+        },
+        {
+          "name": "User Detail",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/me",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "me"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "User Detail",
+              "originalRequest": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json",
+                    "type": "text"
+                  }
+                ],
+                "url": {
+                  "raw": "{{base_url}}/me",
+                  "host": [
+                    "{{base_url}}"
+                  ],
+                  "path": [
+                    "me"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "Host",
+                  "value": "127.0.0.1:8000"
+                },
+                {
+                  "key": "Connection",
+                  "value": "close"
+                },
+                {
+                  "key": "X-Powered-By",
+                  "value": "PHP/8.3.9"
+                },
+                {
+                  "key": "Cache-Control",
+                  "value": "no-cache, private"
+                },
+                {
+                  "key": "Date",
+                  "value": "Fri, 13 Mar 2026 09:24:42 GMT"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Access-Control-Allow-Origin",
+                  "value": "*"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"id\": 3,\n    \"name\": \"tester_al\",\n    \"email\": \"ali@tester.com\"\n}"
+            }
+          ]
+        },
+        {
+          "name": "Logout",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/logout",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "logout"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Logout",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json",
+                    "type": "text"
+                  }
+                ],
+                "url": {
+                  "raw": "{{base_url}}/logout",
+                  "host": [
+                    "{{base_url}}"
+                  ],
+                  "path": [
+                    "logout"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "Host",
+                  "value": "127.0.0.1:8000"
+                },
+                {
+                  "key": "Connection",
+                  "value": "close"
+                },
+                {
+                  "key": "X-Powered-By",
+                  "value": "PHP/8.3.9"
+                },
+                {
+                  "key": "Cache-Control",
+                  "value": "no-cache, private"
+                },
+                {
+                  "key": "Date",
+                  "value": "Fri, 13 Mar 2026 09:41:07 GMT"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Access-Control-Allow-Origin",
+                  "value": "*"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"message\": \"Logged out successfully\"\n}"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Blood Presure",
+      "item": [
+        {
+          "name": "Get Blood Presures",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/blood-pressures",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "blood-pressures"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Get Blood Presures",
+              "originalRequest": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json",
+                    "type": "text"
+                  }
+                ],
+                "url": {
+                  "raw": "{{base_url}}/blood-pressures",
+                  "host": [
+                    "{{base_url}}"
+                  ],
+                  "path": [
+                    "blood-pressures"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "Host",
+                  "value": "127.0.0.1:8000"
+                },
+                {
+                  "key": "Connection",
+                  "value": "close"
+                },
+                {
+                  "key": "X-Powered-By",
+                  "value": "PHP/8.3.9"
+                },
+                {
+                  "key": "Cache-Control",
+                  "value": "no-cache, private"
+                },
+                {
+                  "key": "Date",
+                  "value": "Fri, 13 Mar 2026 09:31:52 GMT"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Access-Control-Allow-Origin",
+                  "value": "*"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"current_page\": 1,\n    \"data\": [\n        {\n            \"id\": 2,\n            \"user_id\": 3,\n            \"systolic\": 180,\n            \"diastolic\": 80,\n            \"pulse\": 89,\n            \"recorded_at\": \"2026-03-12T00:00:00.000000Z\",\n            \"notes\": \"NVM\",\n            \"created_at\": \"2026-03-13T09:28:59.000000Z\",\n            \"updated_at\": \"2026-03-13T09:28:59.000000Z\"\n        },\n        {\n            \"id\": 1,\n            \"user_id\": 3,\n            \"systolic\": 180,\n            \"diastolic\": 80,\n            \"pulse\": 89,\n            \"recorded_at\": \"2026-03-12T00:00:00.000000Z\",\n            \"notes\": null,\n            \"created_at\": \"2026-03-13T09:27:47.000000Z\",\n            \"updated_at\": \"2026-03-13T09:27:47.000000Z\"\n        }\n    ],\n    \"first_page_url\": \"http://127.0.0.1:8000/api/blood-pressures?page=1\",\n    \"from\": 1,\n    \"last_page\": 1,\n    \"last_page_url\": \"http://127.0.0.1:8000/api/blood-pressures?page=1\",\n    \"links\": [\n        {\n            \"url\": null,\n            \"label\": \"&laquo; Previous\",\n            \"page\": null,\n            \"active\": false\n        },\n        {\n            \"url\": \"http://127.0.0.1:8000/api/blood-pressures?page=1\",\n            \"label\": \"1\",\n            \"page\": 1,\n            \"active\": true\n        },\n        {\n            \"url\": null,\n            \"label\": \"Next &raquo;\",\n            \"page\": null,\n            \"active\": false\n        }\n    ],\n    \"next_page_url\": null,\n    \"path\": \"http://127.0.0.1:8000/api/blood-pressures\",\n    \"per_page\": 15,\n    \"prev_page_url\": null,\n    \"to\": 2,\n    \"total\": 2\n}"
+            }
+          ]
+        },
+        {
+          "name": "Create Blood Presures",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "systolic",
+                  "value": "140",
+                  "type": "text",
+                  "uuid": "f8ae088b-b598-48f0-8873-b721182153f3"
+                },
+                {
+                  "key": "diastolic",
+                  "value": "60",
+                  "type": "text",
+                  "uuid": "7545b3c9-ce14-4e8f-87cd-bed9a4dea816"
+                },
+                {
+                  "key": "pulse",
+                  "value": "89",
+                  "type": "text",
+                  "uuid": "00c07083-ba2d-494b-8f2a-24628204f6f5"
+                },
+                {
+                  "key": "recorded_at",
+                  "value": "2026-03-12",
+                  "type": "text",
+                  "uuid": "664ada0f-3114-4830-b9cc-0b82676168f1"
+                },
+                {
+                  "key": "notes",
+                  "value": "",
+                  "type": "text",
+                  "uuid": "d7e783b6-faec-4077-aada-19de16b39688",
+                  "disabled": true
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{base_url}}/blood-pressures",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "blood-pressures"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Create Blood Presures",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "formdata",
+                  "formdata": [
+                    {
+                      "key": "systolic",
+                      "value": "180",
+                      "type": "text",
+                      "uuid": "f8ae088b-b598-48f0-8873-b721182153f3"
+                    },
+                    {
+                      "key": "diastolic",
+                      "value": "80",
+                      "type": "text",
+                      "uuid": "7545b3c9-ce14-4e8f-87cd-bed9a4dea816"
+                    },
+                    {
+                      "key": "pulse",
+                      "value": "89",
+                      "type": "text",
+                      "uuid": "00c07083-ba2d-494b-8f2a-24628204f6f5"
+                    },
+                    {
+                      "key": "recorded_at",
+                      "value": "2026-03-12",
+                      "type": "text",
+                      "uuid": "664ada0f-3114-4830-b9cc-0b82676168f1"
+                    },
+                    {
+                      "key": "notes",
+                      "value": "",
+                      "type": "text",
+                      "uuid": "d7e783b6-faec-4077-aada-19de16b39688",
+                      "disabled": true
+                    }
+                  ]
+                },
+                "url": {
+                  "raw": "{{base_url}}/blood-pressures",
+                  "host": [
+                    "{{base_url}}"
+                  ],
+                  "path": [
+                    "blood-pressures"
+                  ]
+                }
+              },
+              "status": "Created",
+              "code": 201,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "Host",
+                  "value": "127.0.0.1:8000"
+                },
+                {
+                  "key": "Connection",
+                  "value": "close"
+                },
+                {
+                  "key": "X-Powered-By",
+                  "value": "PHP/8.3.9"
+                },
+                {
+                  "key": "Cache-Control",
+                  "value": "no-cache, private"
+                },
+                {
+                  "key": "Date",
+                  "value": "Fri, 13 Mar 2026 09:27:47 GMT"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Access-Control-Allow-Origin",
+                  "value": "*"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"systolic\": \"180\",\n    \"diastolic\": \"80\",\n    \"pulse\": \"89\",\n    \"recorded_at\": \"2026-03-12T00:00:00.000000Z\",\n    \"user_id\": 3,\n    \"updated_at\": \"2026-03-13T09:27:47.000000Z\",\n    \"created_at\": \"2026-03-13T09:27:47.000000Z\",\n    \"id\": 1\n}"
+            }
+          ]
+        },
+        {
+          "name": "Update Blood Pressures",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "systolic",
+                  "value": "180",
+                  "type": "text",
+                  "uuid": "f8ae088b-b598-48f0-8873-b721182153f3"
+                },
+                {
+                  "key": "diastolic",
+                  "value": "80",
+                  "type": "text",
+                  "uuid": "7545b3c9-ce14-4e8f-87cd-bed9a4dea816"
+                },
+                {
+                  "key": "pulse",
+                  "value": "89",
+                  "type": "text",
+                  "uuid": "00c07083-ba2d-494b-8f2a-24628204f6f5"
+                },
+                {
+                  "key": "recorded_at",
+                  "value": "2026-03-12",
+                  "type": "text",
+                  "uuid": "664ada0f-3114-4830-b9cc-0b82676168f1"
+                },
+                {
+                  "key": "notes",
+                  "value": "NVM",
+                  "type": "text",
+                  "uuid": "d7e783b6-faec-4077-aada-19de16b39688"
+                },
+                {
+                  "key": "_method",
+                  "value": "PUT",
+                  "type": "text",
+                  "uuid": "95232d43-2dbd-41af-bd25-174eb92617ea"
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{base_url}}/blood-pressures/1",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "blood-pressures",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "View Blood Pressures Detail",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "systolic",
+                  "value": "180",
+                  "type": "text",
+                  "uuid": "f8ae088b-b598-48f0-8873-b721182153f3"
+                },
+                {
+                  "key": "diastolic",
+                  "value": "80",
+                  "type": "text",
+                  "uuid": "7545b3c9-ce14-4e8f-87cd-bed9a4dea816"
+                },
+                {
+                  "key": "pulse",
+                  "value": "89",
+                  "type": "text",
+                  "uuid": "00c07083-ba2d-494b-8f2a-24628204f6f5"
+                },
+                {
+                  "key": "recorded_at",
+                  "value": "2026-03-12",
+                  "type": "text",
+                  "uuid": "664ada0f-3114-4830-b9cc-0b82676168f1"
+                },
+                {
+                  "key": "notes",
+                  "value": "NVM",
+                  "type": "text",
+                  "uuid": "d7e783b6-faec-4077-aada-19de16b39688"
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{base_url}}/blood-pressures/1",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "blood-pressures",
+                "1"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "View Blood Pressures Detail",
+              "originalRequest": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "formdata",
+                  "formdata": [
+                    {
+                      "key": "systolic",
+                      "value": "180",
+                      "type": "text",
+                      "uuid": "f8ae088b-b598-48f0-8873-b721182153f3"
+                    },
+                    {
+                      "key": "diastolic",
+                      "value": "80",
+                      "type": "text",
+                      "uuid": "7545b3c9-ce14-4e8f-87cd-bed9a4dea816"
+                    },
+                    {
+                      "key": "pulse",
+                      "value": "89",
+                      "type": "text",
+                      "uuid": "00c07083-ba2d-494b-8f2a-24628204f6f5"
+                    },
+                    {
+                      "key": "recorded_at",
+                      "value": "2026-03-12",
+                      "type": "text",
+                      "uuid": "664ada0f-3114-4830-b9cc-0b82676168f1"
+                    },
+                    {
+                      "key": "notes",
+                      "value": "NVM",
+                      "type": "text",
+                      "uuid": "d7e783b6-faec-4077-aada-19de16b39688"
+                    }
+                  ]
+                },
+                "url": {
+                  "raw": "{{base_url}}/blood-pressures/1",
+                  "host": [
+                    "{{base_url}}"
+                  ],
+                  "path": [
+                    "blood-pressures",
+                    "1"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "Host",
+                  "value": "127.0.0.1:8000"
+                },
+                {
+                  "key": "Connection",
+                  "value": "close"
+                },
+                {
+                  "key": "X-Powered-By",
+                  "value": "PHP/8.3.9"
+                },
+                {
+                  "key": "Cache-Control",
+                  "value": "no-cache, private"
+                },
+                {
+                  "key": "Date",
+                  "value": "Fri, 13 Mar 2026 09:32:44 GMT"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Access-Control-Allow-Origin",
+                  "value": "*"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"id\": 1,\n    \"user_id\": 3,\n    \"systolic\": 180,\n    \"diastolic\": 80,\n    \"pulse\": 89,\n    \"recorded_at\": \"2026-03-12T00:00:00.000000Z\",\n    \"notes\": null,\n    \"created_at\": \"2026-03-13T09:27:47.000000Z\",\n    \"updated_at\": \"2026-03-13T09:27:47.000000Z\"\n}"
+            }
+          ]
+        },
+        {
+          "name": "Delete Blood Pressures",
+          "request": {
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "systolic",
+                  "value": "180",
+                  "type": "text",
+                  "uuid": "f8ae088b-b598-48f0-8873-b721182153f3"
+                },
+                {
+                  "key": "diastolic",
+                  "value": "80",
+                  "type": "text",
+                  "uuid": "7545b3c9-ce14-4e8f-87cd-bed9a4dea816"
+                },
+                {
+                  "key": "pulse",
+                  "value": "89",
+                  "type": "text",
+                  "uuid": "00c07083-ba2d-494b-8f2a-24628204f6f5"
+                },
+                {
+                  "key": "recorded_at",
+                  "value": "2026-03-12",
+                  "type": "text",
+                  "uuid": "664ada0f-3114-4830-b9cc-0b82676168f1"
+                },
+                {
+                  "key": "notes",
+                  "value": "NVM",
+                  "type": "text",
+                  "uuid": "d7e783b6-faec-4077-aada-19de16b39688"
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{base_url}}/blood-pressures/2",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "blood-pressures",
+                "2"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Blood Pressure Statistics",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "systolic",
+                  "value": "140",
+                  "type": "text",
+                  "uuid": "f8ae088b-b598-48f0-8873-b721182153f3"
+                },
+                {
+                  "key": "diastolic",
+                  "value": "60",
+                  "type": "text",
+                  "uuid": "7545b3c9-ce14-4e8f-87cd-bed9a4dea816"
+                },
+                {
+                  "key": "pulse",
+                  "value": "89",
+                  "type": "text",
+                  "uuid": "00c07083-ba2d-494b-8f2a-24628204f6f5"
+                },
+                {
+                  "key": "recorded_at",
+                  "value": "2026-03-12",
+                  "type": "text",
+                  "uuid": "664ada0f-3114-4830-b9cc-0b82676168f1"
+                },
+                {
+                  "key": "notes",
+                  "value": "",
+                  "type": "text",
+                  "uuid": "d7e783b6-faec-4077-aada-19de16b39688",
+                  "disabled": true
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{base_url}}/statistics/blood-pressure/monthly",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "statistics",
+                "blood-pressure",
+                "monthly"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Get Blood Pressure Statistics",
+              "originalRequest": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "formdata",
+                  "formdata": [
+                    {
+                      "key": "systolic",
+                      "value": "140",
+                      "type": "text",
+                      "uuid": "f8ae088b-b598-48f0-8873-b721182153f3"
+                    },
+                    {
+                      "key": "diastolic",
+                      "value": "60",
+                      "type": "text",
+                      "uuid": "7545b3c9-ce14-4e8f-87cd-bed9a4dea816"
+                    },
+                    {
+                      "key": "pulse",
+                      "value": "89",
+                      "type": "text",
+                      "uuid": "00c07083-ba2d-494b-8f2a-24628204f6f5"
+                    },
+                    {
+                      "key": "recorded_at",
+                      "value": "2026-03-12",
+                      "type": "text",
+                      "uuid": "664ada0f-3114-4830-b9cc-0b82676168f1"
+                    },
+                    {
+                      "key": "notes",
+                      "value": "",
+                      "type": "text",
+                      "uuid": "d7e783b6-faec-4077-aada-19de16b39688",
+                      "disabled": true
+                    }
+                  ]
+                },
+                "url": {
+                  "raw": "{{base_url}}/statistics/blood-pressure/monthly",
+                  "host": [
+                    "{{base_url}}"
+                  ],
+                  "path": [
+                    "statistics",
+                    "blood-pressure",
+                    "monthly"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "Host",
+                  "value": "127.0.0.1:8000"
+                },
+                {
+                  "key": "Connection",
+                  "value": "close"
+                },
+                {
+                  "key": "X-Powered-By",
+                  "value": "PHP/8.3.9"
+                },
+                {
+                  "key": "Cache-Control",
+                  "value": "no-cache, private"
+                },
+                {
+                  "key": "Date",
+                  "value": "Fri, 13 Mar 2026 09:36:27 GMT"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Access-Control-Allow-Origin",
+                  "value": "*"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"period\": \"monthly\",\n    \"from\": \"2026-03-01 00:00:00\",\n    \"to\": \"2026-03-13 09:36:27\",\n    \"unit\": \"mmHg\",\n    \"systolic_avg\": 160,\n    \"diastolic_avg\": 70,\n    \"pulse_avg\": 89,\n    \"count\": 2\n}"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Blood Sugar",
+      "item": [
+        {
+          "name": "Get Blood Sugar",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/blood-sugars",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "blood-sugars"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Get Blood Sugar",
+              "originalRequest": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json",
+                    "type": "text"
+                  }
+                ],
+                "url": {
+                  "raw": "{{base_url}}/blood-sugars",
+                  "host": [
+                    "{{base_url}}"
+                  ],
+                  "path": [
+                    "blood-sugars"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "Host",
+                  "value": "127.0.0.1:8000"
+                },
+                {
+                  "key": "Connection",
+                  "value": "close"
+                },
+                {
+                  "key": "X-Powered-By",
+                  "value": "PHP/8.3.9"
+                },
+                {
+                  "key": "Cache-Control",
+                  "value": "no-cache, private"
+                },
+                {
+                  "key": "Date",
+                  "value": "Fri, 13 Mar 2026 09:37:50 GMT"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Access-Control-Allow-Origin",
+                  "value": "*"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"current_page\": 1,\n    \"data\": [\n        {\n            \"id\": 2,\n            \"user_id\": 3,\n            \"value\": \"7.20\",\n            \"recorded_at\": \"2026-03-12T00:00:00.000000Z\",\n            \"notes\": null,\n            \"created_at\": \"2026-03-13T09:37:46.000000Z\",\n            \"updated_at\": \"2026-03-13T09:37:46.000000Z\"\n        },\n        {\n            \"id\": 1,\n            \"user_id\": 3,\n            \"value\": \"4.50\",\n            \"recorded_at\": \"2026-03-12T00:00:00.000000Z\",\n            \"notes\": null,\n            \"created_at\": \"2026-03-13T09:37:31.000000Z\",\n            \"updated_at\": \"2026-03-13T09:37:31.000000Z\"\n        }\n    ],\n    \"first_page_url\": \"http://127.0.0.1:8000/api/blood-sugars?page=1\",\n    \"from\": 1,\n    \"last_page\": 1,\n    \"last_page_url\": \"http://127.0.0.1:8000/api/blood-sugars?page=1\",\n    \"links\": [\n        {\n            \"url\": null,\n            \"label\": \"&laquo; Previous\",\n            \"page\": null,\n            \"active\": false\n        },\n        {\n            \"url\": \"http://127.0.0.1:8000/api/blood-sugars?page=1\",\n            \"label\": \"1\",\n            \"page\": 1,\n            \"active\": true\n        },\n        {\n            \"url\": null,\n            \"label\": \"Next &raquo;\",\n            \"page\": null,\n            \"active\": false\n        }\n    ],\n    \"next_page_url\": null,\n    \"path\": \"http://127.0.0.1:8000/api/blood-sugars\",\n    \"per_page\": 15,\n    \"prev_page_url\": null,\n    \"to\": 2,\n    \"total\": 2\n}"
+            }
+          ]
+        },
+        {
+          "name": "Create Blood Sugar",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "value",
+                  "value": "7.2",
+                  "type": "text",
+                  "uuid": "f8ae088b-b598-48f0-8873-b721182153f3"
+                },
+                {
+                  "key": "recorded_at",
+                  "value": "2026-03-12",
+                  "type": "text",
+                  "uuid": "664ada0f-3114-4830-b9cc-0b82676168f1"
+                },
+                {
+                  "key": "notes",
+                  "value": "",
+                  "type": "text",
+                  "uuid": "d7e783b6-faec-4077-aada-19de16b39688",
+                  "disabled": true
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{base_url}}/blood-sugars",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "blood-sugars"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Create Blood Sugar",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "formdata",
+                  "formdata": [
+                    {
+                      "key": "value",
+                      "value": "4.5",
+                      "type": "text",
+                      "uuid": "f8ae088b-b598-48f0-8873-b721182153f3"
+                    },
+                    {
+                      "key": "recorded_at",
+                      "value": "2026-03-12",
+                      "type": "text",
+                      "uuid": "664ada0f-3114-4830-b9cc-0b82676168f1"
+                    },
+                    {
+                      "key": "notes",
+                      "value": "",
+                      "type": "text",
+                      "uuid": "d7e783b6-faec-4077-aada-19de16b39688",
+                      "disabled": true
+                    }
+                  ]
+                },
+                "url": {
+                  "raw": "{{base_url}}/blood-sugars",
+                  "host": [
+                    "{{base_url}}"
+                  ],
+                  "path": [
+                    "blood-sugars"
+                  ]
+                }
+              },
+              "status": "Created",
+              "code": 201,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "Host",
+                  "value": "127.0.0.1:8000"
+                },
+                {
+                  "key": "Connection",
+                  "value": "close"
+                },
+                {
+                  "key": "X-Powered-By",
+                  "value": "PHP/8.3.9"
+                },
+                {
+                  "key": "Cache-Control",
+                  "value": "no-cache, private"
+                },
+                {
+                  "key": "Date",
+                  "value": "Fri, 13 Mar 2026 09:37:31 GMT"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Access-Control-Allow-Origin",
+                  "value": "*"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"value\": \"4.50\",\n    \"recorded_at\": \"2026-03-12T00:00:00.000000Z\",\n    \"user_id\": 3,\n    \"updated_at\": \"2026-03-13T09:37:31.000000Z\",\n    \"created_at\": \"2026-03-13T09:37:31.000000Z\",\n    \"id\": 1\n}"
+            }
+          ]
+        },
+        {
+          "name": "Update Blood Sugar",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "value",
+                  "value": "4.2",
+                  "type": "text",
+                  "uuid": "f8ae088b-b598-48f0-8873-b721182153f3"
+                },
+                {
+                  "key": "recorded_at",
+                  "value": "2026-03-12",
+                  "type": "text",
+                  "uuid": "664ada0f-3114-4830-b9cc-0b82676168f1"
+                },
+                {
+                  "key": "notes",
+                  "value": "NVM",
+                  "type": "text",
+                  "uuid": "d7e783b6-faec-4077-aada-19de16b39688"
+                },
+                {
+                  "key": "_method",
+                  "value": "PUT",
+                  "type": "text",
+                  "uuid": "95232d43-2dbd-41af-bd25-174eb92617ea"
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{base_url}}/blood-sugars/1",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "blood-sugars",
+                "1"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Update Blood Sugar",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "formdata",
+                  "formdata": [
+                    {
+                      "key": "value",
+                      "value": "4.2",
+                      "type": "text",
+                      "uuid": "f8ae088b-b598-48f0-8873-b721182153f3"
+                    },
+                    {
+                      "key": "recorded_at",
+                      "value": "2026-03-12",
+                      "type": "text",
+                      "uuid": "664ada0f-3114-4830-b9cc-0b82676168f1"
+                    },
+                    {
+                      "key": "notes",
+                      "value": "NVM",
+                      "type": "text",
+                      "uuid": "d7e783b6-faec-4077-aada-19de16b39688"
+                    },
+                    {
+                      "key": "_method",
+                      "value": "PUT",
+                      "type": "text",
+                      "uuid": "95232d43-2dbd-41af-bd25-174eb92617ea"
+                    }
+                  ]
+                },
+                "url": {
+                  "raw": "{{base_url}}/blood-sugars/1",
+                  "host": [
+                    "{{base_url}}"
+                  ],
+                  "path": [
+                    "blood-sugars",
+                    "1"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "Host",
+                  "value": "127.0.0.1:8000"
+                },
+                {
+                  "key": "Connection",
+                  "value": "close"
+                },
+                {
+                  "key": "X-Powered-By",
+                  "value": "PHP/8.3.9"
+                },
+                {
+                  "key": "Cache-Control",
+                  "value": "no-cache, private"
+                },
+                {
+                  "key": "Date",
+                  "value": "Fri, 13 Mar 2026 09:38:23 GMT"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Access-Control-Allow-Origin",
+                  "value": "*"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"id\": 1,\n    \"user_id\": 3,\n    \"value\": \"4.20\",\n    \"recorded_at\": \"2026-03-12T00:00:00.000000Z\",\n    \"notes\": \"NVM\",\n    \"created_at\": \"2026-03-13T09:37:31.000000Z\",\n    \"updated_at\": \"2026-03-13T09:38:23.000000Z\"\n}"
+            }
+          ]
+        },
+        {
+          "name": "View Blood Sugar Detail",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "systolic",
+                  "value": "180",
+                  "type": "text",
+                  "uuid": "f8ae088b-b598-48f0-8873-b721182153f3"
+                },
+                {
+                  "key": "diastolic",
+                  "value": "80",
+                  "type": "text",
+                  "uuid": "7545b3c9-ce14-4e8f-87cd-bed9a4dea816"
+                },
+                {
+                  "key": "pulse",
+                  "value": "89",
+                  "type": "text",
+                  "uuid": "00c07083-ba2d-494b-8f2a-24628204f6f5"
+                },
+                {
+                  "key": "recorded_at",
+                  "value": "2026-03-12",
+                  "type": "text",
+                  "uuid": "664ada0f-3114-4830-b9cc-0b82676168f1"
+                },
+                {
+                  "key": "notes",
+                  "value": "NVM",
+                  "type": "text",
+                  "uuid": "d7e783b6-faec-4077-aada-19de16b39688"
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{base_url}}/blood-sugars/1",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "blood-sugars",
+                "1"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "View Blood Sugar Detail",
+              "originalRequest": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "formdata",
+                  "formdata": [
+                    {
+                      "key": "systolic",
+                      "value": "180",
+                      "type": "text",
+                      "uuid": "f8ae088b-b598-48f0-8873-b721182153f3"
+                    },
+                    {
+                      "key": "diastolic",
+                      "value": "80",
+                      "type": "text",
+                      "uuid": "7545b3c9-ce14-4e8f-87cd-bed9a4dea816"
+                    },
+                    {
+                      "key": "pulse",
+                      "value": "89",
+                      "type": "text",
+                      "uuid": "00c07083-ba2d-494b-8f2a-24628204f6f5"
+                    },
+                    {
+                      "key": "recorded_at",
+                      "value": "2026-03-12",
+                      "type": "text",
+                      "uuid": "664ada0f-3114-4830-b9cc-0b82676168f1"
+                    },
+                    {
+                      "key": "notes",
+                      "value": "NVM",
+                      "type": "text",
+                      "uuid": "d7e783b6-faec-4077-aada-19de16b39688"
+                    }
+                  ]
+                },
+                "url": {
+                  "raw": "{{base_url}}/blood-sugars/1",
+                  "host": [
+                    "{{base_url}}"
+                  ],
+                  "path": [
+                    "blood-sugars",
+                    "1"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "Host",
+                  "value": "127.0.0.1:8000"
+                },
+                {
+                  "key": "Connection",
+                  "value": "close"
+                },
+                {
+                  "key": "X-Powered-By",
+                  "value": "PHP/8.3.9"
+                },
+                {
+                  "key": "Cache-Control",
+                  "value": "no-cache, private"
+                },
+                {
+                  "key": "Date",
+                  "value": "Fri, 13 Mar 2026 09:38:43 GMT"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Access-Control-Allow-Origin",
+                  "value": "*"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"id\": 1,\n    \"user_id\": 3,\n    \"value\": \"4.20\",\n    \"recorded_at\": \"2026-03-12T00:00:00.000000Z\",\n    \"notes\": \"NVM\",\n    \"created_at\": \"2026-03-13T09:37:31.000000Z\",\n    \"updated_at\": \"2026-03-13T09:38:23.000000Z\"\n}"
+            }
+          ]
+        },
+        {
+          "name": "Delete Blood Sugar",
+          "request": {
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "systolic",
+                  "value": "180",
+                  "type": "text",
+                  "uuid": "f8ae088b-b598-48f0-8873-b721182153f3"
+                },
+                {
+                  "key": "diastolic",
+                  "value": "80",
+                  "type": "text",
+                  "uuid": "7545b3c9-ce14-4e8f-87cd-bed9a4dea816"
+                },
+                {
+                  "key": "pulse",
+                  "value": "89",
+                  "type": "text",
+                  "uuid": "00c07083-ba2d-494b-8f2a-24628204f6f5"
+                },
+                {
+                  "key": "recorded_at",
+                  "value": "2026-03-12",
+                  "type": "text",
+                  "uuid": "664ada0f-3114-4830-b9cc-0b82676168f1"
+                },
+                {
+                  "key": "notes",
+                  "value": "NVM",
+                  "type": "text",
+                  "uuid": "d7e783b6-faec-4077-aada-19de16b39688"
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{base_url}}/blood-sugars/2",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "blood-sugars",
+                "2"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Blood Sugar Statistics",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "systolic",
+                  "value": "140",
+                  "type": "text",
+                  "uuid": "f8ae088b-b598-48f0-8873-b721182153f3"
+                },
+                {
+                  "key": "diastolic",
+                  "value": "60",
+                  "type": "text",
+                  "uuid": "7545b3c9-ce14-4e8f-87cd-bed9a4dea816"
+                },
+                {
+                  "key": "pulse",
+                  "value": "89",
+                  "type": "text",
+                  "uuid": "00c07083-ba2d-494b-8f2a-24628204f6f5"
+                },
+                {
+                  "key": "recorded_at",
+                  "value": "2026-03-12",
+                  "type": "text",
+                  "uuid": "664ada0f-3114-4830-b9cc-0b82676168f1"
+                },
+                {
+                  "key": "notes",
+                  "value": "",
+                  "type": "text",
+                  "uuid": "d7e783b6-faec-4077-aada-19de16b39688",
+                  "disabled": true
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{base_url}}/statistics/blood-sugar/monthly",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "statistics",
+                "blood-sugar",
+                "monthly"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Get Blood Sugar Statistics",
+              "originalRequest": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "formdata",
+                  "formdata": [
+                    {
+                      "key": "systolic",
+                      "value": "140",
+                      "type": "text",
+                      "uuid": "f8ae088b-b598-48f0-8873-b721182153f3"
+                    },
+                    {
+                      "key": "diastolic",
+                      "value": "60",
+                      "type": "text",
+                      "uuid": "7545b3c9-ce14-4e8f-87cd-bed9a4dea816"
+                    },
+                    {
+                      "key": "pulse",
+                      "value": "89",
+                      "type": "text",
+                      "uuid": "00c07083-ba2d-494b-8f2a-24628204f6f5"
+                    },
+                    {
+                      "key": "recorded_at",
+                      "value": "2026-03-12",
+                      "type": "text",
+                      "uuid": "664ada0f-3114-4830-b9cc-0b82676168f1"
+                    },
+                    {
+                      "key": "notes",
+                      "value": "",
+                      "type": "text",
+                      "uuid": "d7e783b6-faec-4077-aada-19de16b39688",
+                      "disabled": true
+                    }
+                  ]
+                },
+                "url": {
+                  "raw": "{{base_url}}/statistics/blood-sugar/monthly",
+                  "host": [
+                    "{{base_url}}"
+                  ],
+                  "path": [
+                    "statistics",
+                    "blood-sugar",
+                    "monthly"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "Host",
+                  "value": "127.0.0.1:8000"
+                },
+                {
+                  "key": "Connection",
+                  "value": "close"
+                },
+                {
+                  "key": "X-Powered-By",
+                  "value": "PHP/8.3.9"
+                },
+                {
+                  "key": "Cache-Control",
+                  "value": "no-cache, private"
+                },
+                {
+                  "key": "Date",
+                  "value": "Fri, 13 Mar 2026 09:39:55 GMT"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Access-Control-Allow-Origin",
+                  "value": "*"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"period\": \"monthly\",\n    \"from\": \"2026-03-01 00:00:00\",\n    \"to\": \"2026-03-13 09:39:55\",\n    \"unit\": \"mmol/L\",\n    \"average\": 4.2,\n    \"min\": 4.2,\n    \"max\": 4.2,\n    \"count\": 1\n}"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "auth": {
+    "type": "bearer",
+    "bearer": [
+      {
+        "key": "token",
+        "value": "{{token}}",
+        "type": "string"
+      }
+    ]
+  },
+  "event": [
+    {
+      "listen": "prerequest",
+      "script": {
+        "type": "text/javascript",
+        "packages": {},
+        "requests": {},
+        "exec": [
+          ""
+        ]
+      }
+    },
+    {
+      "listen": "test",
+      "script": {
+        "type": "text/javascript",
+        "packages": {},
+        "requests": {},
+        "exec": [
+          ""
+        ]
+      }
+    }
+  ],
+  "variable": [
+    {
+      "key": "token",
+      "value": ""
+    },
+    {
+      "key": "base_url",
+      "value": ""
+    }
+  ]
+}
