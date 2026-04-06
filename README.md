@@ -1,59 +1,118 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# Blood Pressure & Sugar Management System
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+This is a personal health data management system built with **Laravel 12**, designed to help users track and analyze their blood pressure and blood sugar levels. The system combines a robust RESTful API with a responsive Livewire admin dashboard.
 
-## About Laravel
+## Key Features
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+- **Health Monitoring**: Record daily blood sugar (mmol/L) and blood pressure (systolic, diastolic, pulse).
+- **Statistical Analytics**: Generate daily, weekly, monthly, and quarterly health summaries including averages and extremes.
+- **Admin Dashboard**: A responsive management interface built with Livewire 4.2 for maintaining users and health records.
+- **Mobile-Ready API**: Full RESTful suite for integration with mobile apps and third-party services.
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+---
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+## System Architecture
 
-## Learning Laravel
+The project leverages **Laravel 12** as its core framework, following a modern MVC pattern with specialized layers for performance and scalability:
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework. You can also check out [Laravel Learn](https://laravel.com/learn), where you will be guided through building a modern Laravel application.
+- **Backend Logic**: PHP 8.2+ and Laravel 12.
+- **Database Layer**: **MySQL** (using Eloquent ORM for streamlined data modeling).
+- **Frontend Framework**: **Livewire 4.2** provides a dynamic, component-based UI without the overhead of a full JavaScript SPA.
+- **Authentication**:
+    - **API**: **Laravel Sanctum** for lightweight token-based security.
+    - **Web/Admin**: Integrated Laravel session-based authentication.
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+---
 
-## Laravel Sponsors
+## API Design Philosophy
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+The API follows RESTful principles to ensure consistency and developer-friendly integration:
 
-### Premium Partners
+### 1. Resourceful Routing
 
-- **[Vehikl](https://vehikl.com)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Redberry](https://redberry.international/laravel-development)**
-- **[Active Logic](https://activelogic.com)**
+Endpoints are organized around core resources (e.g., `/api/blood-sugars`, `/api/blood-pressures`), utilizing standard HTTP methods for CRUD operations.
 
-## Contributing
+### 2. Strategic Logic Decoupling
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+Business logic and statistical calculations are abstracted into a **Service Layer (`StatisticsService`)**, keeping controllers lean and focused on request/response handling.
 
-## Code of Conduct
+### 3. Security & Rate Limiting
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+- **Throttling**: Sensitive routes (Login/Register) are protected by `throttle:6,1` to mitigate brute-force attempts.
+- **Access Control**: All private data is shielded by the `auth:sanctum` middleware, ensuring data isolation and user ownership.
 
-## Security Vulnerabilities
+---
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+## API Reference
 
-## License
+A complete Postman collection is included in the repository for testing and exploration.
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+> [!TIP]
+> Import [Blood Sugar Presure.postman_collection.json] into Postman to get started.
+
+---
+
+## Design Rationale: Why This Stack?
+
+### 1. MySQL for Data Integrity
+
+**Why**: Health data requires ACID compliance and strong relational integrity. MySQL's proven performance and reliability make it the ideal choice for structured health records.
+
+### 2. High-Performance Statistics via Service Layer
+
+**Why**: Statistical calculations often involve heavy aggregation (`AVG`, `MIN`, `MAX`).
+
+- **Optimization**: The `StatisticsService` uses `selectRaw` to fetch multiple aggregates in a **single database query**, significantly reducing overhead compared to multiple sequential queries.
+
+### 3. Livewire 4 for Admin Efficiency
+
+**Why**: Livewire allows for rapid development of interactive UIs while keeping the entire codebase in PHP. It leverages Vite for instant hot-module replacement and seamless developer experience.
+
+### 4. Sanctum for API Scalability
+
+**Why**: Sanctum strikes the perfect balance between security and simplicity, providing a robust solution for mobile and SPA authentication without the complexity of OAuth2.
+
+---
+
+## Getting Started
+
+### Prerequisites
+
+- PHP 8.2+
+- **MySQL** 8.0+
+- Composer
+- Node.js & NPM
+
+### Setup Instructions
+
+```bash
+# Clone the repository and copy configuration
+cp .env.example .env
+
+# Configure your database settings in .env (DB_DATABASE, DB_USERNAME, DB_PASSWORD)
+
+# Install PHP dependencies
+composer install
+
+# Generate application key and run migrations
+php artisan key:generate
+php artisan migrate
+
+# Install and compile frontend assets
+npm install
+npm run build
+
+# Start the local development server
+php artisan serve
+```
+
+---
+
+## Developer Toolkit
+
+The project includes several tools to maintain high code quality:
+
+- **Pest**: For expressive and readable unit and feature tests.
+- **Laravel Pint**: To enforce PSR-standard code styling.
+- **Laravel Pail**: For real-time log monitoring in the terminal.
+- **Laravel Sail**: Dockerized development environment support.
